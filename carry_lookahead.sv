@@ -9,14 +9,14 @@ module carry_lookahead_adder_4bit(input logic[3:0] a,
    logic[3:0] g, p;
    logic[2:0] c;
    logic o1, o2, o3, o4, o5, o6, o7, o8, o9, o10, o11 // Outputs
-   logic c_out_temp
+   logic couttemp;
 
 
     // instantiate four 1-bit full adders, connect their c_out and c_in
     full_adder_1bit adder0(a[0], b[0], c_in, s[0], c[0]);
     full_adder_1bit adder1(a[1], b[1], c[0], s[1], c[1]);
     full_adder_1bit adder2(a[2], b[2], c[1], s[2], c[2]);
-    full_adder_1bit adder3(a[3], b[3], c[2], s[3], c_out_temp);
+    full_adder_1bit adder3(a[3], b[3], c[2], s[3], couttemp);
 
 
  // Continuous assignments for G and P signals using basic gates
