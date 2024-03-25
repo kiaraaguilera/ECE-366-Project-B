@@ -64,12 +64,12 @@ module carry_lookahead_adder_32bit(
 	logic [6:0] c;
      // Instantiate eight 4-bit carry-lookahead adders
 	carry_lookahead_adder_4bit adder0(a[3:0], b[3:0], c_in, s[3:0], c[0]);
-	carry_lookahead_adder_4bit adder1(a[7:4], b[7:4], g[0], s[7:4], c[1]);
-	carry_lookahead_adder_4bit adder2(a[11:8], b[11:8], g[1], s[11:8], c[2]);
-	carry_lookahead_adder_4bit adder3(a[15:12], b[15:12], g[2], s[15:12], c[3]);
-	carry_lookahead_adder_4bit adder4(a[19:16], b[19:16], g[3], s[19:16], c[4]);
-	carry_lookahead_adder_4bit adder5(a[23:20], b[23:20], g[4], s[23:20], c[5]);
-	carry_lookahead_adder_4bit adder6(a[27:24], b[27:24], g[5], s[27:24], c[6]);
-	carry_lookahead_adder_4bit adder7(a[31:28], b[31:28], g[6], s[31:28], c_out);
+	carry_lookahead_adder_4bit adder1(a[7:4], b[7:4], c[0], s[7:4], c[1]);
+	carry_lookahead_adder_4bit adder2(a[11:8], b[11:8], c[1], s[11:8], c[2]);
+	carry_lookahead_adder_4bit adder3(a[15:12], b[15:12], c[2], s[15:12], c[3]);
+	carry_lookahead_adder_4bit adder4(a[19:16], b[19:16], c[3], s[19:16], c[4]);
+	carry_lookahead_adder_4bit adder5(a[23:20], b[23:20], c[4], s[23:20], c[5]);
+	carry_lookahead_adder_4bit adder6(a[27:24], b[27:24], c[5], s[27:24], c[6]);
+	carry_lookahead_adder_4bit adder7(a[31:28], b[31:28], c[6], s[31:28], c_out);
 
 endmodule
