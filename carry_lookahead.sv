@@ -39,13 +39,13 @@ module carry_lookahead_adder_4bit(input logic[3:0] a,
   and2 n3(o2, p[2], o3);
   or2 n4(o3, g[2], o4);
   and2 n5(o4, p[3], o5);
-  or2 go(o5, g[3], o9);
+  or2 go(o5, g[3], o9);	//generate output
 
 // Logic for propagate output
 
   and2 n6(p[0], p[1], o6);
   and2 n7(p[2], p[3], o7);
-  and2 po(o6, o7, o10);
+  and2 po(o6, o7, o10); //propagate output
 
 // Cout output
   and2 n8(c_in, o10, o11);
